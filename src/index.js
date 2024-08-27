@@ -19,6 +19,18 @@ fetch(
   });
 
 function processData(data) {
+  setTemp(data);
   console.log(data);
 }
-// temp, tempmax, tempmin, windspeed, uvindex, humidity, feelslike, description, datetime
+
+function setTemp(data) {
+  const temp = document.querySelector(".temp");
+  const tempMin = document.querySelector(".temp-min");
+  const tempMax = document.querySelector(".temp-max");
+  const feelsLike = document.querySelector(".feels-like");
+  temp.textContent = data.days[0].temp;
+  tempMin.textContent = data.days[0].tempmin;
+  tempMax.textContent = data.days[0].tempmax;
+  feelsLike.textContent = data.days[0].feelslike;
+}
+// windspeed, uvindex, humidity, feelslike, description, datetime

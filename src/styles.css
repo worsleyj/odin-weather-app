@@ -1,0 +1,8 @@
+.temp-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.other-temps {
+  display: flex;
+}
