@@ -23,9 +23,26 @@ body {
 }
 
 .temp {
+  border-radius: 12px;
+  padding: 12px 36px;
+  margin-top: 24px;
+  border: solid 1px black;
   font-size: 156px;
 }
 
 .feels-like {
   font-size: 54px;
+}
+
+.input-container {
+  margin: 12px;
+}
+
+input,
+button {
+  border-radius: 9px;
+}
+
+button:hover {
+  opacity: 0.6;
 }
