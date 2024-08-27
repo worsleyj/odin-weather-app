@@ -5,7 +5,9 @@ const submitBtn = document.querySelector(".submit");
 
 function fetchWeather(location) {
   fetch(
-    "https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/north%20carolina?unitGroup=us&include=current&key=WFBUJE4N5UY2XA5TGQBQC5VK4&contentType=json",
+    "https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/" +
+      location +
+      "?unitGroup=us&include=current&key=WFBUJE4N5UY2XA5TGQBQC5VK4&contentType=json",
     {
       method: "GET",
       headers: {},
@@ -45,7 +47,7 @@ function displayData(data) {
   humidity.textContent = "Humidity: " + data.days[0].humidity;
   description.textContent = data.days[0].description;
   datetime.textContent = data.days[0].datetime;
-  location.textContent = data.address;
+  location.textContent = data.resolvedAddress;
 }
 
 submitBtn.addEventListener("click", () => {
